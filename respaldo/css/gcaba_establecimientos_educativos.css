@@ -1,0 +1,369 @@
+.row-mbot-1{  margin-bottom: 1em;  }
+.row-mbot-2{  margin-bottom: 2em;  }
+.row-mbot-3{  margin-bottom: 3em;  }
+
+.margin-l-1{   margin-left: 1.2em;  }
+
+#edit-resultados a{ cursor: pointer; }
+
+h5 { margin-bottom: 4px !important; }
+
+#tabla_resultados tr {height: 61px;}
+#tabla_resultados td {  vertical-align: middle;  }
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+  margin-top: -20em;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal-body h3      { margin-bottom: 2em; }
+
+.modal-body .boton  { margin: 3em 0 2em 0; }
+
+.modal-body button  { width: 100%; }
+
+.modal-body p       { padding-left: 1.3em; }
+
+#busqueda_escuela .ofertas_texto{color: #6f6f6f;}
+
+#mapa_interactivo {height: 450px !important;width: 100%;}
+
+.body_temp{ visibility: hidden; }
+
+.visible_print{ display: none; }
+
+#final{display: none;}
+
+/* Es para el responsive en resoluciones chicas,
+cuando se desplega la tabla de resultados de establecimientos */
+html{background-color: white !important;}
+
+#edit-radios input[type=radio], #criterio_busqueda_id input[type=radio]{  position: relative;  margin-right: 0.5em;  }
+
+#edit-radios, #criterio_busqueda_id{ margin-top: 0.5em; margin-left: -1.2em !important; }
+
+
+[id^=boton_].boton_activo{
+  background-color: #e5e5e5;
+  color: #666;
+  box-shadow: 0 0 1px 1px #efefef;
+}
+
+
+#busqueda_escuela .imagenes_escuela img{width: 500px;}
+
+.olPopupContent{ overflow: auto !important; width: auto !important; max-height: 255px !important;  }
+
+/* Ocultamos el footer que se genera dentro del cuadro de seleccion del autocompleter de direcciones de usig*/
+#usig_acv_ubicacion_id .footer{ display: none !important; }
+
+@media only screen and (max-width: 990px) {
+  .imagenes_escuela [class^=col-]{  margin-top: 2em;  }
+  .imprimir_descargar .boton.imprimir{  margin-bottom: 1em;  }
+}
+
+@media only screen and (max-width: 680px) {
+    /* Ajustamos la altura del mapa y el ancho de los popups sobre cada marker, para que sea más coherente con las resoluciones de celulares */
+    #resultados_mapa{height: 350px !important;}
+    .leaflet-popup-content{max-width: 230px !important;}
+}
+
+
+/* MEDIA QUERY para formato impresion */
+@media print{
+  * {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+
+    .imagenes_escuela{ display: none; }
+
+  /*Media query para modificar items sobre configuracion de pagina de impresion por default*/
+  @page{  margin-left: -0.5cm; size: landscape; }
+
+  /*PANTALLA DETALLE ESTABLECIMIENTO*/
+  .visible_print{ display: block; }
+  .oculto_print{ display: none; }
+
+  #mapa_fijo img{ width: 450px !important; height: 315px !important; }
+
+  #pdf_area{ max-width: 90% !important; }
+
+  .vista_impresion h2{ margin-top: -10px !important; }
+  /*----------------------------------*/
+
+  .body_temp{ visibility: visible !important; }
+
+  body *{height: 90% !important;} /* Para evitar la generación de una pagina en blanco*/
+  body  { padding-top: 0px !important; }
+
+
+
+/* Forzamos a que la siguiente sección comience en la pagina 2 para evitar cortarla */
+/*   hr { page-break-before: always; }  */
+
+  
+  /*ESTILOS SOBRE TABLA DE RESULTADOS*/
+  .vista_impresion #edit-resultados .row:not(.area_impresion){
+    display: none !important;
+  }
+  
+  .pagination .current{ border: 1px solid; }
+  .pagination{ margin-bottom: -20px !important; }
+
+  #resultados *:not(.pagination){ margin: 0px !important; }
+  /*-----------------------------------------*/
+
+  /*CORRECCION PARA CORRECTA VISTA DE IMPRESION*/
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+  .col-md-11 {
+    width: 91.66666667%;
+  }
+  .col-md-10 {
+    width: 83.33333333%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+  .col-md-7 {
+    width: 58.33333333%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+  .col-md-pull-12 {
+    right: 100%;
+  }
+  .col-md-pull-11 {
+    right: 91.66666667%;
+  }
+  .col-md-pull-10 {
+    right: 83.33333333%;
+  }
+  .col-md-pull-9 {
+    right: 75%;
+  }
+  .col-md-pull-8 {
+    right: 66.66666667%;
+  }
+  .col-md-pull-7 {
+    right: 58.33333333%;
+  }
+  .col-md-pull-6 {
+    right: 50%;
+  }
+  .col-md-pull-5 {
+    right: 41.66666667%;
+  }
+  .col-md-pull-4 {
+    right: 33.33333333%;
+  }
+  .col-md-pull-3 {
+    right: 25%;
+  }
+  .col-md-pull-2 {
+    right: 16.66666667%;
+  }
+  .col-md-pull-1 {
+    right: 8.33333333%;
+  }
+  .col-md-pull-0 {
+    right: auto;
+  }
+  .col-md-push-12 {
+    left: 100%;
+  }
+  .col-md-push-11 {
+    left: 91.66666667%;
+  }
+  .col-md-push-10 {
+    left: 83.33333333%;
+  }
+  .col-md-push-9 {
+    left: 75%;
+  }
+  .col-md-push-8 {
+    left: 66.66666667%;
+  }
+  .col-md-push-7 {
+    left: 58.33333333%;
+  }
+  .col-md-push-6 {
+    left: 50%;
+  }
+  .col-md-push-5 {
+    left: 41.66666667%;
+  }
+  .col-md-push-4 {
+    left: 33.33333333%;
+  }
+  .col-md-push-3 {
+    left: 25%;
+  }
+  .col-md-push-2 {
+    left: 16.66666667%;
+  }
+  .col-md-push-1 {
+    left: 8.33333333%;
+  }
+  .col-md-push-0 {
+    left: auto;
+  }
+  .col-md-offset-12 {
+    margin-left: 100%;
+  }
+  .col-md-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-md-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-md-offset-9 {
+    margin-left: 75%;
+  }
+  .col-md-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-md-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-md-offset-6 {
+    margin-left: 50%;
+  }
+  .col-md-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-md-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-md-offset-3 {
+    margin-left: 25%;
+  }
+  .col-md-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-md-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-md-offset-0 {
+    margin-left: 0%;
+  }
+}
+
+/* MAQUETADO SUMINISTRADO POR UX */
+
+  /* .contenedor-form-l quita el padding left */
+  .contenedor-form-l{
+    padding-left: 0
+  }
+
+  /* .contenedor-form-l quita el padding left y right */
+  .contenedor-form-lr {
+    padding: 0px;
+  }
+
+  /* .form-top separa bloques del formulario */
+  .form-top{
+    padding-top: 20px;
+  }
+
+  /* .no-color quita formato a link "Ayuda" */
+  .no-color{
+    color:#5c5c5c;
+    text-decoration: none;
+  }
+
+  /*.container{
+      padding: 0;
+  }*/
+
+
+  .shortcut:hover,
+  .shortcut:focus {
+    background: none;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .inscripcion {
+    margin-top: 50px;
+    border-top: 2px solid #d1d1d1;
+    padding-top: 50px;
+  }
+
+  .tabla-resultados {
+    margin-top: 100px;
+
+  }
+
+  .pagination > li > a:active,
+  .pagination > li > a:focus {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+
+  h3 {
+    color:#5d5d5d;
+  }
+
+  .header_table {
+    background-color:  #f1f1f1;
+  }
+
+  .selector_fila:hover {
+      background-color: rgba(106, 203, 117, 0.35) !important;
+  }
+
+  a:visited,
+  a:hover,
+  .btn-link:visited {
+    color: #333;
+
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
+
+  @media (max-width: 992px) {
+    .contenedor-form-l {padding-right: 0px;}
+    .nopad-l {padding-left: 0px;}
+  }
