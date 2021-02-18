@@ -1,9 +1,0 @@
-name           = "GCABA Establecimientos Educativos"
-description    = Buscador de establecimientos educativos
-core           = 7.x
-package        = GCABA
-version        = "v1.2.3-RC1"
-
-files[]        = gcaba_establecimientos_educativos.module
-
-dependencies[] = gcaba_configurations
